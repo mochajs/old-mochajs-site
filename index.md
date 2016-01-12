@@ -989,10 +989,32 @@ The plugin is titled **NodeJS**, and can be installed via **Preferences** > **Pl
 
 ### Wallaby.js
 
-[Wallaby.js](http://wallabyjs.com) is a continuous testing tool that enables real-time code coverage for Mocha with any assertion library in JetBrains IDEs (IntelliJ IDEA, WebStorm, etc.) and Visual Studio for both browser and node.js projects.
-  
+[Wallaby.js](http://wallabyjs.com) is a continuous testing tool that enables real-time code coverage for Mocha with any assertion library in JetBrains IDEs (IntelliJ IDEA, WebStorm, etc.), [Visual Studio](https://visualstudiogallery.msdn.microsoft.com/dbf95258-e2b8-401f-a173-45a3c96a6849) & [Visual Studio Code](https://marketplace.visualstudio.com/items/WallabyJs.wallaby-vscode) for both browser and node.js projects.
+
 ![Wallaby.js in Action](images/wallaby.png)
 
+#### wallaby.js example configuration file for Mocha, Chai & Node
+``` javascript
+module.exports = function (wallaby) {
+  return {
+    files: [
+      'lib/**/*.js'
+    ],
+    tests: [
+      {pattern: 'test/**/*.js'}
+    ],
+    testFramework: "mocha",
+    env: {
+        type: 'node',
+        runner: 'node'
+    },
+    bootstrap: function () {
+      var chai = require('chai');
+      var should = chai.should();
+    }
+  };
+};
+```
 
 ## Examples
 
