@@ -1,5 +1,5 @@
 url: http://mochajs.org
-markdown: redcarpet
+markdown: kramdown
 redcarpet:
   extensions: ["with_toc_data"]
 highlighter: pygments
