@@ -541,7 +541,7 @@ Executes tests on changes to JavaScript in the CWD, and once initially.
 ### `--compilers`
 
 CoffeeScript is no longer supported out of the box. CS and similar transpilers
-may be used by mapping the file extensions (for use with --watch) and the module
+may be used by mapping the file extensions (for use with `--watch`) and the module
 name. For example `--compilers coffee:coffee-script` with CoffeeScript 1.6- or
 `--compilers coffee:coffee-script/register` with CoffeeScript 1.7+.
 
