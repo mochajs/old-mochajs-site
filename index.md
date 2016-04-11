@@ -854,10 +854,10 @@ The command `mocha --reporter doc array` would yield:
 The SuperAgent request library [test documentation](http://visionmedia.github.io/superagent/docs/test.html) was generated with Mocha's doc reporter using this simple make target:
 
 ```makefile
-  test-docs:
-    make test REPORTER=doc \
-      | cat docs/head.html - docs/tail.html \
-      > docs/test.html
+test-docs:
+	$(MAKE) test REPORTER=doc \
+		| cat docs/head.html - docs/tail.html \
+		> docs/test.html
 ```
 
 View the entire [Makefile](https://github.com/visionmedia/superagent/blob/master/Makefile) for reference.
