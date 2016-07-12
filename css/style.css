@@ -24,7 +24,15 @@ h1 {
   transition: opacity 1s;
 }
 
-.onload h1 {
+#_backers a, #_sponsors a {
+  opacity: 0;
+  -webkit-transition: opacity .3s;
+  -moz-transition: opacity .3s;
+  -o-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.onload h1, #_backers.onload a, #_sponsors.onload a {
   opacity: 1;
 }
 
