@@ -10,5 +10,19 @@
   <!--[if lt IE 9]>
   <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
   <![endif]-->
+  <script>
+    // dumb thing that helps with animation of avatars
+    function avatars (type) {
+      return function avatarLoaded () {
+        avatars[type] = typeof avatars[type] === 'number' ? avatars[type] + 1 : 1;
+        if (avatars[type] === 30) {
+          document.getElementById(type).classList.add('onload');
+        }
+      }
+    }
+    avatars.backerLoaded = avatars('_backers');
+    avatars.sponsorLoaded = avatars('_sponsors');
+  </script>
+
   {% include ga.html %}
 </head>
