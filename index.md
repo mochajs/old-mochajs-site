@@ -158,7 +158,7 @@ $ npm install -g mocha
 ## Getting Started
 
 ```sh
-$ npm install -g mocha
+$ npm install -g mocha chai
 $ mkdir test
 $ $EDITOR test/test.js
 
