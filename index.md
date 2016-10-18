@@ -117,6 +117,8 @@ describe('Array', function() {
 Back in the terminal:
 
 ```sh
+$ ./node_modules/mocha/bin/mocha
+
   Array
     #indexOf()
       ✓ should return -1 when the value is not present
