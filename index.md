@@ -127,6 +127,20 @@ $ ./node_modules/mocha/bin/mocha
   1 passing (9ms)
 ```
 
+Set up a test script in package.json:
+
+```json
+"scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  }
+```
+
+Then run tests with:
+
+```sh
+$ npm test
+```
+
 ## Assertions
 
 Mocha allows you to use any assertion library you wish.  In the above example, we're using Node.js' built-in [assert](https://nodejs.org/api/assert.html) module--but generally, if it throws an `Error`, it will work! This means you can use libraries such as:
