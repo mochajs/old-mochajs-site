@@ -131,7 +131,7 @@ Set up a test script in package.json:
 
 ```json
 "scripts": {
-    "test": "./node_modules/mocha/bin/mocha"
+    "test": "mocha"
   }
 ```
 
