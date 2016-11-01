@@ -5,12 +5,11 @@
  */
 
 'use strict';
-
 const chalk = require('chalk');
+const pkg = require('../package.json');
 const yellow = chalk.yellow;
 const bold = chalk.bold;
 const hipEmoji = '\uD83D\uDC49';
-const pkg = require('../package.json');
 
 console.log(`${hipEmoji}    ${chalk.yellow(pkg.name)} installation:
 1. Follow instructions for your platform in ${chalk.bold('README.md')}.
@@ -18,3 +17,5 @@ console.log(`${hipEmoji}    ${chalk.yellow(pkg.name)} installation:
 3. Execute ${chalk.bold('npm start serve')} to build, watch & serve the site.
 
 For more help, execute ${chalk.bold('npm start')}.`);
+
+require('./import-contributing');

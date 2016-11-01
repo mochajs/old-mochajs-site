@@ -25,6 +25,6 @@ exports.scripts = {
     script: 'stylelint styles/*.css'
   },
   css: {
-    script: 'postcss -c .postcss.json --dir css styles/*.css'
+    script: 'postcss -c .postcss.json --dir css styles/*'
   }
 };

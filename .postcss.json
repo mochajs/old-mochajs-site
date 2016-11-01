@@ -1,9 +1,5 @@
 {
   "use": [
-    "postcss-cssnext",
-    "cssnano"
-  ],
-  "cssnano": {
-    "autoprefixer": false
-  }
+    "postcss-cssnext"
+  ]
 }

@@ -1,5 +1,6 @@
 ---
-layout: default
+layout: main
+title: Mocha
 ---
 
 {% include intro.html %}
