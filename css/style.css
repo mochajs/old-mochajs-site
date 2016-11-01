@@ -7,15 +7,42 @@ body {
   border-top: 2px solid #ddd;
 }
 
-#content {
+section {
+  padding: 0 96px 60px 96px;
+}
+
+section#content {
   padding: 0 110px 60px 110px;
 }
 
 header {
-  padding: 140px 110px 0 110px;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+  height: 64px;
 }
 
-h1 {
+header a {
+  float: left;
+  display: block;
+}
+
+header h1 {
+  color: #c29d7f;
+  font-size: 26px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  margin: 0 20px;
+  float: left;
+  line-height: 64px;
+}
+
+header#_header {
+  padding: 140px 110px 0 110px;
+  border-bottom: none;
+  height: auto;
+}
+
+header#_header h1 {
   margin-left: -19px;
   opacity: 0;
   -webkit-transition: opacity 1s;
@@ -37,7 +64,7 @@ h1 {
 }
 
 h2 {
-  margin-top: 80px;
+  margin-top: 60px;
   font-weight: 400;
   letter-spacing: 1px;
   border-bottom: 1px solid #ddd;
@@ -87,6 +114,10 @@ h3 > code {
   letter-spacing: 1px;
 }
 
+#page {
+  font-size: 16px;
+}
+
 a {
   color: #8D6748;
 }
@@ -95,7 +126,14 @@ a:hover {
   color: #717171;
 }
 
-ul {
+section ul li, section ol li {
+  margin-bottom: 9px;
+}
+section ul li:first-child, section ol li:first-child {
+  margin-top: 9px;
+}
+
+section#content ul {
   margin-top: 20px;
   padding: 0 15px;
   width: 100%;
@@ -107,7 +145,7 @@ ul {
   box-sizing: content-box;
 }
 
-ul li {
+#content ul li {
   margin-top: 5px;
   margin-right: 60px;
   list-style: none;
@@ -118,7 +156,7 @@ ul li {
   column-break-inside: avoid;
 }
 
-ul::after {
+#content ul::after {
   content: '.';
   height: 0;
   display: block;
@@ -127,7 +165,13 @@ ul::after {
 }
 
 code {
-  font: 12px monaco, monospace;
+  font: 14px monaco, monospace;
+}
+
+section#page code {
+  font-size: 14px;
+  background-color: #eee;
+  padding: 0 3px 0 3px;
 }
 
 pre {
@@ -159,9 +203,9 @@ img {
   max-width: 100%;
 }
 
-img[src*="opencollective.com/mochajs"], img[src*=badges], img[src*=".svg"] {
-    margin: 0;
-    box-shadow: none;
+img[src*="opencollective.com/mochajs"], img[src*=badges], img[src*=".svg"], img[src*="mocha-logo.png"] {
+  margin: 0;
+  box-shadow: none;
 }
 
 footer {
@@ -172,7 +216,7 @@ footer {
   border-top: 1px solid #ddd;
 }
 
-footer span {
+footer p {
   display: block;
   margin-right: 30px;
   color: #888;
