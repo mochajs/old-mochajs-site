@@ -1,4 +1,4 @@
 root = true
 
-[*.md]
+[*.md,*.yml]
 trim_trailing_whitespace = false

@@ -1,48 +1,40 @@
 ---
 layout: default
-title: 'Mocha - the fun, simple, flexible JavaScript test framework'
 ---
-Mocha is a feature-rich JavaScript test framework running on [Node.js](http://nodejs.org) and in the browser, making asynchronous testing *simple* and *fun*. Mocha tests run serially, allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases. Hosted on [GitHub](https://github.com/mochajs/mocha).
 
-  [![Gitter](//badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mochajs/mocha)
-  [![OpenCollective](//opencollective.com/mochajs/backers/badge.svg)](#backers)
-  [![OpenCollective](//opencollective.com/mochajs/sponsors/badge.svg)](#sponsors)
-
-{% include backers.md %}
-{% include sponsors.md %}
+{% include intro.html %}
 
 ## Features
 
 - browser support
-- simple async support, including promises
-- test coverage reporting
+- asynchronous test support, including Promises
 - string diff support
-- javascript API for running tests
-- proper exit status for CI support etc
-- auto-detects and disables coloring for non-ttys
+- JavaScript API for running tests
+- proper exit status for CI support
+- auto-detects and disables coloring for non-TTYs
 - maps uncaught exceptions to the correct test case
-- async test timeout support
-- test retry support
-- test-specific timeouts
-- growl notification support
+- granular timeout support for asynchronous tests
+- "retry" support for functional testing
+- [Growl](http://growl.info) notification support
 - reports test durations
 - highlights slow tests
 - file watcher support
 - global variable leak detection
-- optionally run tests that match a regexp
+- optionally run tests that match a regular expression
 - auto-exit to prevent "hanging" with an active loop
-- easily meta-generate suites & test-cases
-- mocha.opts file support
-- clickable suite titles to filter test execution
-- node debugger support
+- supports dynamic generation of suites & tests
+- `mocha.opts` file support
+- in browser, clickable suite titles to filter test execution
+- Node.js debugger support
 - detects multiple calls to `done()`
-- use any assertion library you want
+- works with any assertion library
 - extensible reporting, bundled with 9+ reporters
 - extensible test DSLs or "interfaces"
-- before, after, before each, after each hooks
-- arbitrary transpiler support (coffee-script etc)
-- TextMate bundle
-- and more!
+- before all, after all, before each, & after each hooks
+- arbitrary transpiler support (e.g. [Babel](http://babeljs.io), [CoffeeScript](http://coffeescript.org))
+- [TextMate](http://macromates.com) bundle
+- ...and more!
+{: .two-column}
 
 ## Table of Contents
 
@@ -824,7 +816,7 @@ describe('app', function() {
 
 Mocha's "interface" system allows developers to choose their style of DSL.  Mocha has **BDD**, **TDD**, **Exports**, **QUnit** and **Require**-style interfaces.
 
-### BDD
+### BDD Interface
 
 The **BDD** interface provides `describe()`, `context()`, `it()`, `specify()`, `before()`, `after()`, `beforeEach()`, and `afterEach()`.
 
@@ -858,7 +850,7 @@ The **BDD** interface provides `describe()`, `context()`, `it()`, `specify()`, `
   });
 ```
 
-### TDD
+### TDD Interface
 
 The **TDD** interface provides `suite()`, `test()`, `suiteSetup()`, `suiteTeardown()`, `setup()`, and `teardown()`:
 
@@ -876,7 +868,7 @@ suite('Array', function() {
 });
 ```
 
-### Exports
+### Exports Interface
 
 The **Exports** interface is much like Mocha's predecessor [expresso](https://github.com/tj/expresso). The keys `before`, `after`, `beforeEach`, and `afterEach` are special-cased, object values are suites, and function values are test-cases:
 

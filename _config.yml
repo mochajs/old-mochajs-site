@@ -1,4 +1,7 @@
 url: https://mochajs.org
+name: mochajs.org
+title: Mocha
+description: The fun, simple & flexible JavaScript test framework
 exclude:
   - node_modules
   - README.md
@@ -8,5 +11,3 @@ exclude:
   - npm-debug.log*
   - scripts
   - .*
-
-

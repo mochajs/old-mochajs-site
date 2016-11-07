@@ -1,4 +1,10 @@
-<header id="_header">
-  <h1><a href="/"><img onload="window.document.getElementById('_header').classList.add('onload');" src="//cldup.com/xFVFxOioAU.svg"></a></h1>
-  <p id="tag"><em>simple</em>, <em>flexible</em>, <em>fun</em></p>
-</header>
+<div class="container">
+  <div class="title header-section">
+    <div class="logo">
+      <a href="{{ '/' | absolute_url }}" title="Mocha">{{ site.title }}</a>
+    </div>
+    <div class="description">
+      <h2>{{ site.description | markdownify }}</h2>
+    </div>
+  </div>
+</div>

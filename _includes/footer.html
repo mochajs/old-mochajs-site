@@ -1,14 +1,29 @@
 <footer>
   <span>
-    <a href="https://mochajs.org">mochajs.org</a> is licensed under a <a rel="license"
+    <a href="{{ site.url }}">mochajs.org</a> is licensed under a <a rel="license"
       href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
     <p><em>Last updated: {{ site.time | date: "%c" }}</em>
   </span>
+  <script src="{{ '/js/smoothscroll.min.js' | absolute_url }}"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.min.js"></script>
   <script>
-    anchors.options = {
-      placement: 'left'
-    };
-    anchors.add('h2, h3');
+    (function () {
+      'use strict';
+      anchors.options = {
+        placement: 'left'
+      };
+      anchors.add('h2, h3');
+//
+//      var context = document.querySelector('.content');
+//      document.querySelectorAll('a[href^="#"]')
+//        .forEach(function (el) {
+//          el.addEventListener('click', function (evt) {
+//            evt.preventDefault();
+//            console.log(evt);
+//
+//            smoothScroll(document.querySelector(evt.target.hash), 250, null, context);
+//          });
+//        });
+    }());
   </script>
 </footer>
