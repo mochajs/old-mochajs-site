@@ -5,7 +5,7 @@ const join = require('path').join;
 
 exports.scripts = {
   serve: {
-    script: 'bundle exec jekyll serve --safe --drafts --watch',
+    script: 'bundle exec jekyll serve --safe --drafts --watch --host 0.0.0.0',
     description: `Build site via Jekyll, watch for changes, serve at ${chalk.underline(
       'http://localhost:4000/')}`
   },
@@ -20,5 +20,11 @@ exports.scripts = {
   postinstall: {
     script: join(__dirname, 'postinstall.js'),
     description: 'Displays help after installing'
+  },
+  test: {
+    script: 'stylelint styles/*.css'
+  },
+  css: {
+    script: 'postcss -c .postcss.json --dir css styles/*.css'
   }
 };

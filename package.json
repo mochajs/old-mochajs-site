@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "postinstall": "npm start postinstall",
-    "start": "nps --silent --config ./scripts/package-scripts.js"
+    "start": "nps --silent --config ./scripts/package-scripts.js",
+    "test": "npm start test"
   },
   "repository": {
     "type": "git",
@@ -18,8 +19,14 @@
   "homepage": "https://mochajs.org",
   "devDependencies": {
     "chalk": "^1.1.3",
+    "cssnano": "^3.8.1",
     "markdown-toc": "^0.13.0",
-    "p-s": "^3.0.1"
+    "p-s": "^3.0.1",
+    "postcss-cli": "^2.6.0",
+    "postcss-cssnext": "^2.8.0",
+    "postcss-high-contrast": "^1.3.0",
+    "stylelint": "^7.6.0",
+    "stylelint-config-standard": "^15.0.0"
   },
   "engines": {
     "node": ">=4.0.0",
@@ -75,5 +82,12 @@
     "Will Langstroth (https://github.com/wlangstroth)",
     "Xavier Damman <xdamman@gmail.com> (https://github.com/xdamman)",
     "XhmikosR <xhmikosr@gmail.com> (https://github.com/XhmikosR)"
-  ]
+  ],
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "selector-list-comma-newline-after": null,
+      "color-hex-length": null
+    }
+  }
 }

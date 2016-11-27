@@ -10,4 +10,5 @@ exclude:
   - CNAME
   - npm-debug.log*
   - scripts
+  - styles/**/*
   - .*
