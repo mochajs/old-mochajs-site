@@ -10,6 +10,10 @@ exclude:
   - 'CNAME'
   - 'npm-debug.log*'
   - 'scripts'
-  - 'styles/**/*'
+  - 'styles/'
   - '.*'
   - '*.orig'
+gems:
+  - jekyll-github-metadata
+repository: mochajs/mochajs.github.io
+timezone: America/Los_Angeles

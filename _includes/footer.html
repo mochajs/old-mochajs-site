@@ -22,4 +22,13 @@
       anchors.add('h2:not([class="description"]), h3');
     }());
   </script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/js/emojify.min.js"></script>
+  <script>
+    emojify.setConfig({
+      mode: 'img',
+      ignore_emoticons: true,
+      img_dir: '//cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/images/basic'
+    });
+    emojify.run(document.getElementById('main'));
+  </script>
 </footer>

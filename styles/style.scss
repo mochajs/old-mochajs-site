@@ -57,6 +57,7 @@ header {
 
 body.layout-main {
   padding-top: 160px;
+
   @media only screen and (max-device-width: 568px) {
     padding-top: 96px;
   }
@@ -79,6 +80,7 @@ body.layout-main {
         height: 64px;
         width: 64px;
         background-size: 64px 64px;
+
         @media (min-device-width: 768px) {
           height: 128px;
           width: 128px;
@@ -88,6 +90,7 @@ body.layout-main {
 
       .description {
         max-width: 200px;
+
         @media only screen and (max-device-width: 568px) {
           display: none;
         }
@@ -97,6 +100,7 @@ body.layout-main {
 
   main {
     padding-top: 96px;
+
     @media only screen and (max-device-width: 568px) {
       padding-top: 160px;
     }
@@ -105,6 +109,7 @@ body.layout-main {
 
 body.layout-page {
   padding-top: 96px;
+
   @media only screen and (max-device-width: 568px) {
     padding-top: 64px;
   }
@@ -119,6 +124,7 @@ body.layout-page {
     z-index: 1030;
     padding: 15px 20px;
     border-bottom: 1px solid #dddddd;
+
     @media only screen and (max-device-width: 568px) {
       height: 96px;
     }
@@ -132,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
 
 pre, code {
   font-family: 'Fira Mono', 'Monaco', 'Droid Sans Mono', 'Courier New', 'Courier', monospace;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 
 a {
@@ -164,6 +170,18 @@ a:visited, a:hover, a:active {
 .content {
   font-size: 1.6rem;
   padding: 2em;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
 }
 
 .two-column li {
@@ -221,14 +239,6 @@ a:visited, a:hover, a:active {
   margin-left: 185px;
 }
 
-.content img {
-  margin: 30px;
-  padding: 1px;
-  border-radius: 3px;
-  box-shadow: 0 3px 10px #dedede, 0 1px 5px #888888;
-  max-width: 100%;
-}
-
 img[src*="opencollective.com/mochajs"], img[src*=badges], img[src*=".svg"] {
   margin: 0;
   box-shadow: none;
@@ -270,4 +280,33 @@ pre {
   padding: 0.5em;
   border: 1px solid #f4f4f4;
   overflow-x: scroll;
+}
+
+.emoji {
+  display: inline-block;
+  background-size: contain;
+  width: auto;
+}
+
+h2 .emoji {
+  height: 2.8rem;
+  margin-bottom: 0.5rem;
+}
+
+h3 .emoji {
+  height: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+p .emoji {
+  height: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+h2 > img {
+  padding-right: 0.25rem;
+}
+
+h3 > img {
+  padding-right: 0.5rem;
 }
