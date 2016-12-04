@@ -7,23 +7,27 @@ const fs = require('fs');
 const Transform = require('stream').Transform;
 const path = require('path');
 
-console.log('Pulling CONTRIBUTING.md from mochajs/mocha into contributing/index.md...');
+console.log('Pulling CONTRIBUTING.md from mochajs/mocha into contributing' +
+  '/index.md...');
 
 got.stream(
   'https://raw.githubusercontent.com/mochajs/mocha/master/CONTRIBUTING.md')
   .pipe(new Transform({
     transform(chunk, encoding, done) {
-      if (!this.first) {
+      if (this.first) {
+        this.push(chunk);
+      } else {
+        // add front matter
         this.push(`---
 layout: page
 title: Mocha - Contributing
 description: Contributing to Mocha
 ---
 `);
-        this.push(String(chunk).replace(/#\s.+\n\n/im, ''));
+        // remove top-level header
+        this.push(String(chunk)
+          .replace(/#\s.+\n\n/im, ''));
         this.first = true;
-      } else {
-        this.push(chunk);
       }
       done();
     },
@@ -31,4 +35,5 @@ description: Contributing to Mocha
   .pipe(fs.createWriteStream(
     path.join(__dirname, '..', 'contributing', 'index.md')));
 
-console.log('...done.  Run scripts/import-contributing.js to sync the doc again.');
+console.log('...done.  Run scripts/import-contributing.js to sync the doc ' +
+  'again.');
