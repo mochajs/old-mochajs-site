@@ -1245,8 +1245,7 @@ babel-node node_modules/.bin/istanbul cover _mocha -- test => work
 
 babel-node node_modules/.bin/istanbul cover mocha -- test => does not work
 
-{
-    
+{    
     "scripts":
     
     {
@@ -1256,7 +1255,6 @@ babel-node node_modules/.bin/istanbul cover mocha -- test => does not work
         "test:coverage": "istanbul cover _mocha -- --check-leaks test/*-tests.js",  
     
     }
-
 }
 
 
