@@ -1247,6 +1247,7 @@ babel-node node_modules/.bin/istanbul cover mocha -- test => does not work
 
 {    
     "scripts":
+    
     {
     
         "test": "mocha",
