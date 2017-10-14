@@ -295,7 +295,7 @@ describe('hooks', function() {
 });
 ```
 
-> Tests can appear before, after, or interspersed with your hooks.  Hooks will run in the order they are defined, as appropriate; all `before()` hooks run (once), then any `beforeEach()` hooks, tests, any `afterEach()` hooks, and finally `after()` hooks (once).
+> Tests can appear before, after, or interspersed with your hooks.  Hooks will run in the order they are defined, as appropriate; all `before()` hooks run (once), then any `beforeEach()` hooks, tests, any `afterEach()` hooks, and finally `after()` hooks (once).  
 
 ### Describing Hooks
 
@@ -527,9 +527,9 @@ it('should only test in the correct environment', function() {
 });
 ```
 
-The above test will be reported as [pending](#pending-tests).  It's also important to note that calling `this.skip()` will effectively *abort* the test.
+The above test will be reported as [pending](#pending-tests).  It's also important to note that calling `this.skip()` will effectively *abort* the test.  
 
-> *Best practice*: To avoid confusion, do not execute further instructions in a test or hook after calling `this.skip()`.
+> *Best practice*: To avoid confusion, do not execute further instructions in a test or hook after calling `this.skip()`.  
 
 Contrast the above test with the following code:
 
