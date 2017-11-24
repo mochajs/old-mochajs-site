@@ -150,6 +150,7 @@ Mocha allows you to use any assertion library you wish.  In the above example, w
 - [chai](http://chaijs.com/) - `expect()`, `assert()` and `should`-style assertions
 - [better-assert](https://github.com/visionmedia/better-assert) -  C-style self-documenting `assert()`
 - [unexpected](http://unexpected.js.org) - "the extensible BDD assertion toolkit"
+- [inspect.js](https://inspectjs.com) - modern BDD style assertion library
 
 ## Asynchronous Code
 
